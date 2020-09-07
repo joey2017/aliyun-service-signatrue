@@ -29,14 +29,12 @@ class AliyunService {
 
     /**
      * AliyunService constructor.
-     * @param string $key
-     * @param string $secret
      */
-    public function __construct(string $key, string $secret)
+    public function __construct()
     {
         date_default_timezone_set("GMT");
-        $this->accessKeyId     = $key;
-        $this->accessKeySecret = $secret;
+        $this->accessKeyId     = config('aliyun.key');
+        $this->accessKeySecret = config('aliyun.secret');
         $this->setConfig([
             'Format'          => 'JSON',
             'AccessKeyId'     => $this->accessKeyId,
