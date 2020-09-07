@@ -60,6 +60,8 @@ class AliyunService {
             'BizType'          => $biz_type,
         ]);
         $this->config['Signature'] = $this->computeSignature($this->getConfig(), 'GET', $this->accessKeySecret);
+
+        return $this;
     }
 
     /**
