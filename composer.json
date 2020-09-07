@@ -1,0 +1,37 @@
+{
+  "name": "leezj/laravel-aliyun-signatrue",
+  "description": "Laravel-Aliyun-Service-Signatrue",
+  "keywords": [
+    "laravel",
+    "aliyun"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "leezj",
+      "email": "leezongjun@163.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Aliyun\\Signatrue\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aliyun\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Aliyun\\Signatrue\\AliyunServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
