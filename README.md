@@ -53,5 +53,11 @@ php artisan vendor:publish --provider="Aliyun\Signatrue\AliyunServiceProvider"
 
 3. 代码使用
 ```php
-// 成功返回 第一个参数可接受item和resource
-return $this->success($user,$meta);
+
+$biz_id = '20200595466666-5666' //系统生成随机唯一的认证编号
+
+获取实人认证token
+$token = app(AliyunService::class)->init('DescribeVerifyToken', $biz_id)->getRequest();
+
+获取实人认证结果
+$result = app(AliyunService::class)->init('DescribeVerifyResult', $biz_id)->getRequest()
