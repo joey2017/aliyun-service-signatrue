@@ -161,7 +161,7 @@ class AliyunService {
             $request  = new Request('POST', $fullurl);
             $response = $client->send($request);
         } catch (\Exception $e) {
-            Log::error('发起人脸识别认证请求失败：' . $e->getMessage(), ['info' => $e->getTraceAsString()]);
+            Log::error('发起实人认证请求失败：' . $e->getMessage(), ['info' => $e->getTraceAsString()]);
         }
 
         return json_decode($response->getBody(), true);
